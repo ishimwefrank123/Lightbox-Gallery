@@ -70,3 +70,29 @@ bocy{
 .lightbox-next{
     right: 0;
 }
+/* Make it responsive */
+@media(max-width: 767px){
+    .gallery-container{
+        width: 100%;
+    }
+    .gallery-item{
+        flex-basis: 49.80%;
+        margin-bottom: 3px;
+    }
+    .lightbox-content{
+        width: 80%;
+        height: 60%;
+        margin: 15% auto;
+    }
+}
+
+@media (max-width: 480px){
+    .gallery-item{
+        flex-basis: 100%;
+        margin-bottom: 1px;
+    }
+    .lightbox-content{
+        width: 90%;
+        margin: 20px auto;
+    }
+}
