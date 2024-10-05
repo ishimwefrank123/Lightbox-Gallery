@@ -95,7 +95,14 @@
         lightBoxPrev.addEventListener('click', prevImage)
         lightBoxNex.addEventListener('click', nextImage);
 
+        //close lightbox
+        function closeLightBox(){
+            if( this === event.target){
+                lightBoxContainer.style.display = "none"; 
+            }
+        }
 
+        lightBoxContainer.addEventListener("click", closeLightBox)
      </script>
 </body>
 </html>
