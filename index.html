@@ -30,7 +30,7 @@
         const lightBoxContainer = document.createElement("div");
 
         //for basic area
-        const loghtBoxContainer = document.createElement("div");
+        const lightBoxContent = document.createElement("div");
 
         //for images
         const lightBoxImg = document.createElement("div");
@@ -40,6 +40,21 @@
 
         //for next button
         const lightBoxNext = document.createElement("div");
+
+
+        // create classList
+        lightBoxContainer.classList.add('lightbox');
+        lightBoxContent.classList.add('lightbox-content');
+        lightBoxPrev.classList.add("fa","fa-angle-left","lightbox-prev");
+        lightBoxNex.classList.add("fa","fa-angle-right","lightbox-next");
+
+        lightBoxContainer.appendChild(lightBoxContent);
+        lightBoxContent.appendChild(lightBoxImg);
+        lightBoxContent.appendChild(lightBoxPrev);
+        lightBoxContent.appendChild(lightBoxNext);
+        document.body.appendChild(lightBoxContainer);
+
+        let index = 1;
 
      </script>
 </body>
