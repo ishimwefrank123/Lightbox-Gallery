@@ -12,15 +12,35 @@
 </head>
 <body>
     <div class="gallery-container">
-        <div class="gallery-item"><img src="light1.jpeg" alt=""></div>
-        <div class="gallery-item"><img src="light2.jpg" alt=""></div>
-        <div class="gallery-item"><img src="light3.jpeg" alt=""></div>
-        <div class="gallery-item"><img src="light4.jpeg" alt=""></div>
-        <div class="gallery-item"><img src="light5.jpg" alt=""></div>
-        <div class="gallery-item"><img src="light6.jpg" alt=""></div>
-        <div class="gallery-item"><img src="light7.jpg" alt=""></div>
-        <div class="gallery-item"><img src="light8.jpeg" alt=""></div>
-        <div class="gallery-item"><img src="light9.jpg" alt=""></div>
+        <div class="gallery-item" data-index="1"><img src="light1.jpeg" alt=""></div>
+        <div class="gallery-item" data-index="2"><img src="light2.jpg" alt=""></div>
+        <div class="gallery-item" data-index="3"><img src="light3.jpeg" alt=""></div>
+        <div class="gallery-item" data-index="4"><img src="light4.jpeg" alt=""></div>
+        <div class="gallery-item" data-index="5"><img src="light5.jpg" alt=""></div>
+        <div class="gallery-item" data-index="6"><img src="light6.jpg" alt=""></div>
+        <div class="gallery-item" data-index="7"><img src="light7.jpg" alt=""></div>
+        <div class="gallery-item" data-index="8"><img src="light8.jpeg" alt=""></div>
+        <div class="gallery-item" data-index="9"><img src="light9.jpg" alt=""></div>
     </div>
+
+    <!-- javascript -->
+     <script>
+        const galleryItem = document.getElementsByClassName("gallery-item");
+        // create element for lightboc
+        const lightBoxContainer = document.createElement("div");
+
+        //for basic area
+        const loghtBoxContainer = document.createElement("div");
+
+        //for images
+        const lightBoxImg = document.createElement("div");
+
+        //for prev button to change images
+        const lightBoxPrev = document.createElement("div");
+
+        //for next button
+        const lightBoxNext = document.createElement("div");
+
+     </script>
 </body>
 </html>
