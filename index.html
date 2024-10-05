@@ -26,6 +26,8 @@
     <!-- javascript -->
      <script>
         const galleryItem = document.getElementsByClassName("gallery-item");
+
+
         // create element for lightboc
         const lightBoxContainer = document.createElement("div");
 
@@ -33,7 +35,7 @@
         const lightBoxContent = document.createElement("div");
 
         //for images
-        const lightBoxImg = document.createElement("div");
+        const lightBoxImg = document.createElement("img");
 
         //for prev button to change images
         const lightBoxPrev = document.createElement("div");
@@ -46,13 +48,13 @@
         lightBoxContainer.classList.add('lightbox');
         lightBoxContent.classList.add('lightbox-content');
         lightBoxPrev.classList.add("fa","fa-angle-left","lightbox-prev");
-        lightBoxNex.classList.add("fa","fa-angle-right","lightbox-next");
+        lightBoxNext.classList.add("fa","fa-angle-right","lightbox-next");
 
         lightBoxContainer.appendChild(lightBoxContent);
         lightBoxContent.appendChild(lightBoxImg);
         lightBoxContent.appendChild(lightBoxPrev);
         lightBoxContent.appendChild(lightBoxNext);
-        document.body.appendChild(lightBoxContainer);
+        document.body.appendChild(lightBoxContainer)
 
         let index = 1;
 
@@ -65,7 +67,7 @@
                 index = galleryItem.length
             }
 
-            let imageLocation = galleryItem[index - 1].children[0].getAttribute("src");
+            let imageLocation = galleryItem[index-1].children[0].getAttribute("src");
             lightBoxImg.setAttribute("src",imageLocation);
         }
 
@@ -77,7 +79,7 @@
         }
 
         for (let i = 0; i<galleryItem.length; i++){
-            galleryItem[i].addEventListener('click', currentImage)
+            galleryItem[i].addEventListener("click", currentImage)
         }
 
         function sliderImage(n){
@@ -92,12 +94,12 @@
             sliderImage(1);
         }
 
-        lightBoxPrev.addEventListener('click', prevImage)
-        lightBoxNex.addEventListener('click', nextImage);
+        lightBoxPrev.addEventListener("click", prevImage)
+        lightBoxNext.addEventListener("click", nextImage);
 
         //close lightbox
         function closeLightBox(){
-            if( this === event.target){
+            if( event.target === lightBoxContainer){
                 lightBoxContainer.style.display = "none"; 
             }
         }
