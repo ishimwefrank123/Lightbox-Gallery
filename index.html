@@ -56,6 +56,18 @@
 
         let index = 1;
 
+        //create function
+
+        function showLightBox(n){
+            if(n > galleryItem.length){
+                index = 1;
+            }else if(n < 1){
+                index = galleryItem.length
+            }
+
+            let imageLocation = galleryItem[index - 1].children[0].getAttribute("src");
+            lightBoxImg.setAttribute("src",imageLocation);
+        }
      </script>
 </body>
 </html>
