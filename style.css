@@ -9,12 +9,17 @@ bocy{
     width: 94%;
     padding: 10%;
     box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    margin: 0px auto;
 }
 .gallery-item{
     flex-basis: 32.7%;
     margin-bottom: 6px;
     opacity: 0.85;
     cursor: pointer;
+}
+
+.gallery-item:hover{
+    opacity: 1;
 }
 .gallery-item img{
     width: 100%;
